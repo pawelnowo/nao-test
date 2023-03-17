@@ -1,5 +1,7 @@
 import React from 'react';
 import * as GlobalStyles from '../GlobalStyles.js';
+import * as RiveAnimation from '../custom-files/RiveAnimation';
+import * as Utils from '../utils';
 import { Button, SVG, ScreenContainer, withTheme } from '@draftbit/ui';
 import { StyleSheet, View } from 'react-native';
 
@@ -33,6 +35,34 @@ const WalktroughScreen = props => {
           title={'Log in'}
         />
       </View>
+      {/* Pager */}
+      <View style={styles(theme).Viewc6f5641c}>
+        {/* Step */}
+        <View
+          style={[
+            GlobalStyles.ViewStyles(theme)['Step'],
+            styles(theme).View9f538e05,
+          ]}
+        />
+        {/* Step */}
+        <View
+          style={[
+            GlobalStyles.ViewStyles(theme)['Step'],
+            styles(theme).View0cee9e8e,
+          ]}
+        />
+        {/* Step */}
+        <View
+          style={[
+            GlobalStyles.ViewStyles(theme)['Step'],
+            styles(theme).Vieweb656cfc,
+          ]}
+        />
+      </View>
+      {/* Rive animation */}
+      <Utils.CustomCodeErrorBoundary>
+        <RiveAnimation.RiveAnimation />
+      </Utils.CustomCodeErrorBoundary>
     </ScreenContainer>
   );
 };
@@ -53,6 +83,22 @@ const styles = theme =>
       paddingTop: 10,
     },
     SVG9691912c: { height: 20, marginBottom: 22, marginTop: 22, width: 58 },
+    View0cee9e8e: {
+      alignSelf: 'stretch',
+      backgroundColor: theme.colors['Light'],
+      flexGrow: 1,
+      height: 3,
+      marginRight: 3,
+      width: 20,
+    },
+    View9f538e05: {
+      backgroundColor: theme.colors['Light'],
+      flexGrow: 1,
+      flexShrink: 1,
+      height: 3,
+      marginRight: 3,
+      width: 20,
+    },
     Viewa5c9f3bb: {
       alignItems: 'center',
       alignSelf: 'stretch',
@@ -62,6 +108,22 @@ const styles = theme =>
       paddingLeft: 24,
       paddingRight: 24,
       width: '100%',
+    },
+    Viewc6f5641c: {
+      flexDirection: 'row',
+      paddingBottom: 18,
+      paddingLeft: 24,
+      paddingRight: 24,
+      paddingTop: 18,
+    },
+    Vieweb656cfc: {
+      alignContent: 'flex-start',
+      alignSelf: 'stretch',
+      backgroundColor: theme.colors['Light'],
+      flexGrow: 1,
+      height: 3,
+      marginRight: 0,
+      width: 20,
     },
   });
 
