@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "NAO Test",
-    "slug": "n-a-o-test",
-    "scheme": "untitled-app",
+    "slug": "nao-walktrough",
+    "scheme": "nao-walktrough",
     "description": "My app powered by Draftbit",
     "privacy": "unlisted",
     "platforms": [

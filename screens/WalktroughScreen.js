@@ -3,7 +3,7 @@ import * as GlobalStyles from '../GlobalStyles.js';
 import * as RiveAnimation from '../custom-files/RiveAnimation';
 import * as Utils from '../utils';
 import { Button, SVG, ScreenContainer, withTheme } from '@draftbit/ui';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const WalktroughScreen = props => {
   const { theme } = props;
@@ -28,10 +28,7 @@ const WalktroughScreen = props => {
         />
         {/* Button Secondary */}
         <Button
-          style={[
-            GlobalStyles.ButtonStyles(theme)['Button'],
-            styles(theme).Button95d7f075,
-          ]}
+          style={GlobalStyles.ButtonStyles(theme)['ButtonSecondary']}
           title={'Log in'}
         />
       </View>
@@ -59,30 +56,56 @@ const WalktroughScreen = props => {
           ]}
         />
       </View>
+      {/* Text */}
+      <View style={styles(theme).Viewcec4bbbc}>
+        {/* Title */}
+        <Text style={GlobalStyles.TextStyles(theme)['Title']}>
+          {'Higher yields investing in a unique type of securities'}
+        </Text>
+        {/* Subtitle */}
+        <Text
+          style={[
+            GlobalStyles.TextStyles(theme)['Subtitle'],
+            styles(theme).Text80098478,
+          ]}
+        >
+          {
+            'Reverse Convertible Bonds offer high yields of between 10% to 30% p.a. well above the standard instruments.'
+          }
+        </Text>
+      </View>
       {/* Rive animation */}
       <Utils.CustomCodeErrorBoundary>
         <RiveAnimation.RiveAnimation />
       </Utils.CustomCodeErrorBoundary>
+      {/* Bottom bar */}
+      <View style={styles(theme).Viewd56b4cd3}>
+        {/* Button Primary */}
+        <Button
+          style={[
+            GlobalStyles.ButtonStyles(theme)['ButtonPrimary'],
+            styles(theme).Button38cdb536,
+          ]}
+          title={'Get Started'}
+        />
+      </View>
     </ScreenContainer>
   );
 };
 
 const styles = theme =>
   StyleSheet.create({
-    Button95d7f075: {
-      backgroundColor: theme.colors['Secondary'],
-      borderRadius: 9999,
-      color: theme.colors['Primary'],
+    Button38cdb536: {
+      borderRadius: 999,
       fontFamily: 'Inter_600SemiBold',
-      fontSize: 16,
-      letterSpacing: 0.24,
+      fontSize: 18,
+      letterSpacing: 0.2,
       lineHeight: 24,
-      paddingBottom: 10,
-      paddingLeft: 16,
-      paddingRight: 16,
-      paddingTop: 10,
+      padding: 16,
+      textTransform: 'uppercase',
     },
     SVG9691912c: { height: 20, marginBottom: 22, marginTop: 22, width: 58 },
+    Text80098478: { lineHeight: 20, marginTop: 8 },
     View0cee9e8e: {
       alignSelf: 'stretch',
       backgroundColor: theme.colors['Light'],
@@ -115,6 +138,17 @@ const styles = theme =>
       paddingLeft: 24,
       paddingRight: 24,
       paddingTop: 18,
+    },
+    Viewcec4bbbc: { paddingLeft: 24, paddingRight: 24 },
+    Viewd56b4cd3: {
+      bottom: 30,
+      left: 0,
+      paddingBottom: 8,
+      paddingLeft: 24,
+      paddingRight: 24,
+      paddingTop: 8,
+      position: 'absolute',
+      right: 0,
     },
     Vieweb656cfc: {
       alignContent: 'flex-start',
